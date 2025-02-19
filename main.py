@@ -58,8 +58,8 @@ def read_sensor_data():
     while True:
         if ser.in_waiting > 0:  
             data = ser.readline().decode('utf-8').strip()
-            print(f"vales: {data}")
-            return jsonify({"data": '576'}), 200
+            # print(f"vales: {data}")
+            return jsonify({"data": data}), 200
         return jsonify({"data": "No data"}), 404
 
 
